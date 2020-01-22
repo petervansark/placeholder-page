@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /*============================================================================*\
 	CSS for Placeholder Pages
 	------------------------------------------------------------------------
@@ -11,91 +12,101 @@
 	(https://source.unsplash.com/), and their contributors for the
 	background images.
 \*============================================================================*/
-
-body
-{
-	background: #ccc url(https://source.unsplash.com/featured/?mountain,lake) center center/cover fixed;
-	color: #fff;
-
+body {
+	/* background: #ccc url(https://source.unsplash.com/featured/?mountain,lake) center center/cover fixed; */
+	background-color: rgb(248, 248, 248);
 	display: flex;
-
 	flex-direction: column;
-
 	align-items: center;
 	justify-content: center;
-
 	padding: 0;
-
 	height: 80vh;
-
 	margin: 0
 }
 
-body > header
-{
+body>header {
 	text-align: center
 }
 
-h1
-{
+h1 {
 	font-family: 'Bree Serif', serif;
-
 	text-shadow: 2px 2px 2px #000;
-
 	margin: 1em 0 0 0
 }
 
-h2
-{
-	border-radius: 1em;
+h2 {
+	font-weight: 500;
+	margin-bottom: 30px;
+}
 
-	background-color: rgba(0,0,0,0.25);
-
-	padding: 0.5em 0.75em;
-
+article {
+	color: #666;
+	border-radius: 4px;
+	/* background-color: rgba(0, 0, 0, .25); */
+	background-color: #fff;
+	padding: 1.5em 1.75em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
-	font-weight: normal;
-
-	text-shadow: 2px 2px 2px #333;
-
-	margin: 1em 0 0 0
+	font-size: 1.4em;
+	font-weight: 400;
+	box-shadow: 2px 2px 2px #eee;
+	margin: 1em 0 0 0;
+	line-height: 2em;
 }
 
-body > header > img.featured
-{
+@media(max-width:799px) {
+	article {
+		font-size: 1em;
+		line-height: 1.5em;	
+	}
+}
+
+@media(min-width:800px) {
+	article {
+		width: 514px;
+	}
+}
+
+a {
+	color: #000;
+	transition: all 0.3s;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #2e8dde;
+	text-decoration: none;
+}
+
+.fab, .fas {
+	margin-right: 0.75em;
+	font-size: larger;
+}
+
+body>header>img.featured {
 	display: block;
-
-	width: 256px; /* Half of the intrinsic image width. */
-	height: 222px; /* Half of the intrinsic image height. */
-
-	opacity: 0.75
+	/* width: 256px;
+	height: 222px;
+	opacity: .75 */
+	max-width: 100%;
 }
 
-body > header > p.initial
-{
+body>header>p.initial {
 	display: flex;
-
 	font-family: 'Bree Serif', serif;
 	font-size: 10em;
-
 	align-items: center;
 	justify-content: center;
-
-	background: url(../images/hexagon-007889-512x444.png) center center/256px 222px no-repeat;
-
-	width: 256px; /* Half of the intrinsic image width. */
-	height: 222px; /* Half of the intrinsic image height. */
-
-	opacity: 0.75
+	background-size: contain;
+	/* background: url(../images/logo.png) center center no-repeat; */
+	width: 256px;
+	height: 222px;
+	/* opacity: .75 */
 }
 
-.buttons
-{
+.buttons {
 	margin: 2em 0 0 0
 }
 
-.btn-group + .btn-group
-{
+.btn-group+.btn-group {
 	margin-left: 1em
 }

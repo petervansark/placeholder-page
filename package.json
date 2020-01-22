@@ -4,7 +4,7 @@
   "description": "A Clean, Pretty Placeholder Page",
   "main": "source/index.html",
   "devDependencies": {
-    "grunt": "^1.0.0",
+    "grunt": "^1.0.4",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -26,5 +26,8 @@
     "name": "Brian Sexton",
     "url": "https://briansexton.com/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "grunt-cli": "^1.3.2"
+  }
 }
